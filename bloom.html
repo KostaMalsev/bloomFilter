@@ -1,7 +1,15 @@
 <script>
 
 
-let arr = [1,2,3,4,5,6,7,8,9,10,11];
+//let arr = [1,2,3,4,5,6,7,8,9,10,11,12];
+let arr = [];
+for(let i=0;i<1000;i++)
+{
+  arr.push(i);
+}
+
+let misses = 0;
+
 let maskEven=0;
 let maskOdd=0;
 
@@ -9,9 +17,9 @@ arr.forEach(n=>{
   isInSet(n);
 });
 
-arr.forEach(n=>{
+/*arr.forEach(n=>{
   isInSet(n);
-});
+});*/
 
 
 function isInSet(n)
@@ -19,7 +27,8 @@ function isInSet(n)
   
   if(n % 2){
     if( (n & maskEven) == n ){
-      console.log(n +" in set even" );  
+      console.log(n +" in set even" );
+      misses++;  
     }else{
       maskEven |= n;
       console.log(n +" not in set even" );
