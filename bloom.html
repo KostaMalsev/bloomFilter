@@ -36,6 +36,7 @@ function isInSet(n)
     }
   }else{
     if( (n & maskOdd) == n ){
+      misses++; 
       //console.log(n +" in set odd" );
     }else{
       maskOdd |= n;
