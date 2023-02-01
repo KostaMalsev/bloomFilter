@@ -17,6 +17,7 @@ arr.forEach(n=>{
   isInSet(n);
 });
 
+console.log('misses='+misses);
 /*arr.forEach(n=>{
   isInSet(n);
 });*/
@@ -27,18 +28,18 @@ function isInSet(n)
   
   if(n % 2){
     if( (n & maskEven) == n ){
-      console.log(n +" in set even" );
+      //console.log(n +" in set even" );
       misses++;  
     }else{
       maskEven |= n;
-      console.log(n +" not in set even" );
+      //console.log(n +" not in set even" );
     }
   }else{
     if( (n & maskOdd) == n ){
-      console.log(n +" in set odd" );
+      //console.log(n +" in set odd" );
     }else{
       maskOdd |= n;
-      console.log(n +" not in set odd" );
+      //console.log(n +" not in set odd" );
     }
   }
 }
