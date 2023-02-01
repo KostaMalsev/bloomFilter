@@ -2,7 +2,27 @@
 
 
 let arr = [1,2,3,4,5,6,7,8,9,10,11];
+let maskEven=0;
+let maskOdd=0;
+
+function isInSet(n)
+{
+  
+  if(n % 2){
+    if( (n & maskEven) > 0 ){
+      console.log(n +" is set even" );  
+    }else{
+      maskEven &= n;
+    }
+  }else{
+    if( (n & maskOdd) > 0 ){
+      console.log(n +" is set odd" );
+    }else{
+      maskOdd &= n;
+    }
+  }
+}
 
 
 
-</scipt>
+</script>
