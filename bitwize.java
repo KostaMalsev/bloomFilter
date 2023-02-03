@@ -34,31 +34,18 @@ public class MyClass {
         return ~(~0 << numOfParams);
     }
     
-}
-
-
-static int findPosition(int n)
+    private static checkBitmap(long bitMap)
     {
-        if (!isPowerOfTwo(n))
-            return -1;
- 
-        int i = 1, pos = 1;
- 
-        // Iterate through bits of n till we find a set bit
-        // i&n will be non-zero only when 'i' and 'n' have a set bit
-        // at same position
-        while ((i & n) == 0) {
-            // Unset current bit and set the next bit in 'i'
-            i = i << 1;
- 
-            // increment position
-            ++pos;
+        if(bitMap!=0){
+            for(int i=0;i<8*8){ //8bits in byte 8bytes in long
+                if((bitMap & (1 << i))!=0)
+                {
+                    //pushtoLog(Hashmap[i].key)
+                }
+            }
         }
- 
-        return pos;
     }
     
-    static boolean isPowerOfTwo(int n)
-    {
-        return (n > 0 && ((n & (n - 1)) == 0)) ? true : false;
-    }
+    private static int[]
+    
+}
