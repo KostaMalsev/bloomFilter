@@ -15,7 +15,7 @@ public class MyClass {
      System.out.println(Integer.toBinaryString(unuseBitdMap));
      //unuseBitdMap = unSetBit(3,unuseBitdMap);
      //unuseBitdMap = unSetBit(1,unuseBitdMap);
-     unuseBitdMap = unSetBit(10,unuseBitdMap);
+     unuseBitdMap = SetBit(10,unuseBitdMap);
 
      System.out.println(Integer.toBinaryString(unuseBitdMap));
      
@@ -23,7 +23,7 @@ public class MyClass {
         
     }
     
-    private static int unSetBit(int pos,int unusedMap)
+    private static int SetBit(int pos,int unusedMap)
     {
         unusedMap |= 1 << pos;
         return unusedMap;
